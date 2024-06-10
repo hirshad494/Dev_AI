@@ -1,23 +1,10 @@
 import bot from './assets/bot.svg';
 import user from './assets/user.svg';
-import { marked } from 'marked';
-import hljs from 'highlight.js';
-import 'highlight.js/styles/default.css'; // Import a CSS theme for highlighting
 
 const form = document.querySelector('form');
 const chatContainer = document.querySelector('#chat_container');
 
 let loadInterval;
-
-marked.setOptions({
-    breaks: true,
-    gfm: true,
-    headerIds: false,
-    sanitize: true,
-    smartLists: true,
-    smartypants: false,
-    xhtml: false,
-});
 
 function loader(element) {
     element.textContent = '';
@@ -62,7 +49,7 @@ function chatStripe(isAi, value, uniqueId) {
             alt="${isAi ? 'bot' : 'user'}" 
           />
         </div>
-        <div class="message" id=${uniqueId}></div>
+        <div class="message" id=${uniqueId}>${value}</div>
       </div>
     </div>
   `;
@@ -109,14 +96,7 @@ const handleSubmit = async (e) => {
             const data = await response.json();
             const parsedData = data.message.trim();
 
-            // Use marked to convert markdown to HTML
-            const markdownHtml = marked(parsedData);
-            messageDiv.innerHTML = markdownHtml;
-
-            // Highlight all code blocks
-            messageDiv.querySelectorAll('pre code').forEach((block) => {
-                hljs.highlightBlock(block);
-            });
+            typeText(messageDiv, parsedData);
         } else {
             const err = await response.text();
 
