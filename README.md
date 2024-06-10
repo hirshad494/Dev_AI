@@ -1,4 +1,3 @@
-
 # DevAI - Your AI in Code
 
 Welcome to DevAI, an innovative project designed to harness the power of artificial intelligence and streamline your development processes. DevAI integrates advanced AI models to provide intelligent solutions, automate tasks, and enhance productivity for developers.
@@ -17,6 +16,7 @@ Welcome to DevAI, an innovative project designed to harness the power of artific
 - **Axios**: A promise-based HTTP client for the browser and Node.js to make HTTP requests.
 - **Nodemon**: A tool that helps develop Node.js based applications by automatically restarting the node application when file changes are detected.
 - **CORS**: Middleware to enable Cross-Origin Resource Sharing, allowing your application to handle requests from different origins.
+- **Vanilla JavaScript**: Used to handle frontend logic and interactions.
 
 ## Getting Started
 
@@ -31,32 +31,32 @@ Ensure you have the following installed on your local machine:
 
 1. **Clone the repository**:
 
-    \`\`\`bash
+    ```bash
     git clone https://github.com/hirshad494/Dev_AI.git
     cd Dev_AI
-    \`\`\`
+    ```
 
 2. **Install dependencies**:
 
-    \`\`\`bash
+    ```bash
     npm install
-    \`\`\`
+    ```
 
 3. **Set up environment variables**:
 
-    Create a \`.env\` file in the root directory and add your OpenAI API key:
+    Create a `.env` file in the root directory and add your OpenAI API key:
 
-    \`\`\`plaintext
+    ```plaintext
     OPENAI_API_KEY=your-openai-api-key-here
-    \`\`\`
+    ```
 
 ### Running the Application
 
 Start the server:
 
-\`\`\`bash
+```bash
 npm start
-\`\`\`
+```
 
 The application will be available at \`http://localhost:3000\`.
 
@@ -64,9 +64,9 @@ The application will be available at \`http://localhost:3000\`.
 
 Send a POST request to the \`/api/chat\` endpoint with your prompt to interact with the AI model. Example:
 
-\`\`\`bash
+```bash
 curl -X POST http://localhost:3000/api/chat -H "Content-Type: application/json" -d '{"prompt": "Explain the concept of closures in JavaScript"}'
-\`\`\`
+```
 
 ## Contributing
 
@@ -77,21 +77,21 @@ We welcome contributions to DevAI! If you have ideas for new features or improve
 1. **Fork the repository**.
 2. **Create a new branch**:
 
-    \`\`\`bash
+    ```bash
     git checkout -b feature-branch
-    \`\`\`
+    ```
 
 3. **Make your changes and commit them**:
 
-    \`\`\`bash
+    ```bash
     git commit -m "Add new feature"
-    \`\`\`
+    ```
 
 4. **Push to the branch**:
 
-    \`\`\`bash
+    ```bash
     git push origin feature-branch
-    \`\`\`
+    ```
 
 5. **Open a pull request** on GitHub.
 
