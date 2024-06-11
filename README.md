@@ -11,7 +11,6 @@ Welcome to DevAI, an innovative project designed to harness the power of artific
 ## Technologies Used
 
 - **Node.js**: A powerful JavaScript runtime for building scalable and efficient server-side applications.
-- **Express.js**: A minimal and flexible Node.js web application framework that provides robust features for web and mobile applications.
 - **OpenAI GPT-3.5 Turbo**: Leveraging the advanced capabilities of OpenAI's language model to deliver intelligent and context-aware responses.
 - **Axios**: A promise-based HTTP client for the browser and Node.js to make HTTP requests.
 - **Nodemon**: A tool that helps develop Node.js based applications by automatically restarting the node application when file changes are detected.
